@@ -1,0 +1,126 @@
+body {
+	margin:0px;
+	font-family: Libertation Sans;
+}
+.cabecera {
+	width:50%;
+	margin:0 auto;
+	height:70px;
+	padding:20px;
+
+}
+.titulo {
+	font-size:25px;
+	color:blue;
+	width:100px;
+
+}
+.ingreso {
+	padding-top:30px;	
+	float:right;
+	color: lightblue;
+	font-size:20px;
+
+}
+.medio {
+	background-color:indigo;
+	height:450px;
+	box-shadow: 0 0 15px 1px indigo;
+
+
+}
+.textomedio {
+	width:50%;
+	color:white;
+	margin:0 auto;
+	padding:20px;
+
+
+}
+.concuchara {
+	
+
+}
+.final {
+	color:grey;
+	font-size:15px;
+	margin:0 auto;
+	width:50%;
+}
+.oscurecer {
+	background-image:url(img/transparencia.png);
+	background-repeat:repeat; 
+	width:100%; 
+	height: 100%; 
+	z-index:10; 
+	position:fixed; 
+	margin:0px;
+}
+.ventana {
+	margin:0 auto;
+	margin-top:10%; 
+	padding: 30px;
+	padding-right:60px;
+	background-color:lavender; 
+	height: 230px;
+	width:400px;
+	text-align:right;	
+}
+input {
+	padding:4px;
+
+}
+a:link {
+	color: lightblue;	
+	text-decoration:none;
+}
+a:visited {
+	color: lightblue;
+	text-decoration:none;
+	}
+a:hover {
+	color:indigo;
+}
+a:active {
+	text-decoration:none;
+}
+.invisible {
+	visibility:hidden;
+	display:none;	
+}
+.visible {
+	visibility: visible;
+	display: inherit;	
+}
+.cerrar {
+	float:right;
+
+}
+.error {
+	font-style:italic;
+	color:red;
+}
+.encabezado {
+	font-size:17px;
+	font-weight:bold;
+}
+.cajalogo {
+	float:right;
+
+}
+.botonGrande:link, .botonGrande:visited {
+	background-color:ForestGreen;
+	padding:18px;
+	padding-top:12px;
+	padding-bottom:12px;
+	color:white;
+	font-weight:bold;
+	font-size:17px;	
+	border-radius:5px;
+}
+.botonGrande:hover {
+	color:ForestGreen;
+	background-color:lightblue;
+		
+	
+}

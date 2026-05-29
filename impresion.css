@@ -1,0 +1,31 @@
+body {
+	background-color: white;
+	color: black;
+	text-align: left;
+	font-family: liberation-serif;
+	font-size: 10pt ;
+}
+.iz {
+	text-align:center;
+	float:left;
+	font-family: liberation-serif;
+	font-size: 10pt ;
+	width: 260px;
+}
+.der {
+	text-align:center;
+	margin:0 auto;
+	font-family: liberation-serif;
+	font-size: 11pt ;
+	
+}
+.titulo {
+	font-size: 30pt;
+	font-weight: bold;
+	text-align:center;
+	
+}
+.chiquito {
+	font-size: 6pt;
+	
+}

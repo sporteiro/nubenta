@@ -1,0 +1,232 @@
+body {
+	background-color: #FFF;
+	color: white;
+	text-align: center;
+	font-family: "Times New Roman", Times, serif; 
+
+}
+.administrador {
+	width:900px;
+	margin:0 auto;
+	background-color: silver;
+	padding: 10px;
+	text-align:right;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius: 15px;
+
+}
+.concuchillo {
+	width:900px;
+	margin:0 auto;
+	background-color: lavender;
+	padding: 10px;
+	text-align:right;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius: 15px;
+	font-family: "Times New Roman", Times, serif; 
+
+}
+.titulo {
+	font-size:33px;
+	margin:0 auto;
+}
+.invisible {
+	visibility:hidden;
+	display:none;	
+}
+.visible {
+	visibility: visible;
+	display: inherit;	
+}
+.ingresar {
+	
+	width: 25%;
+	margin:0 auto;
+	background-color: #c2468b;
+	padding: 10%;
+	text-align:right;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius: 15px;
+}
+input {
+	text-align:left;
+	padding: 5px;;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius: 10px;
+	background-color: white;
+	color: black;
+	font-family: "Times New Roman", Times, serif; 
+}
+select {
+	text-align:left;
+	padding: 5px;;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius: 10px;
+	background-color: white;
+	color: black;
+	font-family: "Times New Roman", Times, serif; 
+}
+a:link {
+	padding: 5px;
+	color: white;
+	text-decoration:none;
+	background-color: blue;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3x;
+	border-radius: 3px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;  
+	}
+a:hover {
+	padding: 5px;
+	color: black;
+	text-decoration:none;
+	background-color: skyblue;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3x;
+	border-radius: 3px;
+	font-family: "Times New Roman", Times, serif; 
+
+}
+a:visited {
+	color: white;
+	text-decoration:none;
+	padding: 5px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3x;
+	border-radius: 3px;
+	font-family: "Times New Roman", Times, serif; 
+}
+.botonera {
+	text-align:left;
+
+}
+.iframes {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	text-align: left;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3x;
+	border-radius: 3px;
+
+}
+table	{
+	width: 800px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3x;
+	border-radius: 3px;
+	text-align: right;
+
+}
+tr.negro td {
+	background-color: DarkSlateGray;	
+	border: 1 1 grey;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3x;
+	border-radius: 3px;
+	padding: 5px;
+	text-align:left;
+
+
+}
+.contenido {
+	height:auto;
+
+}
+.botones {
+	background-color: blue;
+	color: white;
+	border: 0;
+	padding: 10px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif; 
+}
+.botones:hover {
+	background-color: skyblue;
+	color: black;
+	border: 0;
+	padding: 10px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif; 
+}
+.botonesrojos {
+	background-color: red;
+	color: white;
+	border: 0;
+	padding: 10px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif; 
+}
+.botonesrojos:hover {
+	background-color: orange;
+	color: black;
+	border: 0;
+	padding: 10px;
+	font-weight: bold;
+}
+.agregados {
+	background-color: DarkSlateGray;	
+	border: 1 1 grey;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3x;
+	border-radius: 3px;
+	padding: 5px;
+	text-align:left;
+}
+img {
+	text-decoration: none;
+	border: thin none #000000;
+	padding: 0px;
+	color: black;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border-radius: 0px;
+	font-weight: bold;
+	font-family: times;
+}
+.error {
+	background-image: url(img/transparencia.png);
+	background-repeat: repeat;
+	padding: 30px;
+	margin:0 auto;
+	position: absolute;
+	width: 90%;
+	height:90%;
+	border: thin solid #ffffff;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+	color: #ff0000;
+	font-family: "Times New Roman", Times, serif; 
+}
+.error p {
+	padding:15%;
+
+}
+.fondonegro {
+	background-color: black;
+	padding: 5px;
+}
+.fondonegro td {
+	padding: 5px;
+}
+.nada, .nada a:link, .nada a:hover, .nada a:active, .nada a:visited	{
+	text-decoration: none;
+	border: thin none #000000;
+	padding: 0px;
+	color: black;
+	background-color: black;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border-radius: 0px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif; 
+}
