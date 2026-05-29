@@ -44,8 +44,8 @@ if (isset($_POST["nombre"])) {
 	$ticket_chiquito = $conn->real_escape_string($_POST['ticket_chiquito']);
 	$moneda = $conn->real_escape_string($_POST['moneda'] ?? '');
 
-	$stmt4 = $conn->prepare("UPDATE datos_empresa SET nombre = ?, NIF_CIF = ?, direccion = ?, telefono = ?, ticket_grande = ?, ticket_chiquito = ?, moneda = ? WHERE CodUsu = ?");
-	$stmt4->bind_param('ssssssss', $nombrempresa, $NIF_CIF, $direccion, $telefono, $ticket_grande, $ticket_chiquito, $moneda, $sesion->CodUsu);
+	$stmt4 = $conn->prepare("UPDATE datos_empresa SET nombre = ?, NIF_CIF = ?, direccion = ?, telefono = ?, ticket_grande = ?, ticket_chiquito = ? WHERE CodUsu = ?");
+	$stmt4->bind_param('sssssss', $nombrempresa, $NIF_CIF, $direccion, $telefono, $ticket_grande, $ticket_chiquito, $sesion->CodUsu);
 	$stmt4->execute();
 	$stmt4->close();
 	header("Location: mantenimiento.php");

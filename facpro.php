@@ -32,7 +32,7 @@ if ( (isset($_POST["insertaryborrar"])) )  {
 
 
 	
-	$stmt3 = $conn->prepare("INSERT INTO facpro (SELECT * FROM compras WHERE CodUsu = ?)");
+	$stmt3 = $conn->prepare("INSERT INTO facpro (NumeroFactura,OrdMov,CodFac,CodArt,NomArt,DesArt,precio,PreCom,descuento,IVA,recargo,cantidad,stock,fecha,hora,ForPag,albaran_factura,CodUsu) SELECT NumeroFactura,OrdMov,CodFac,CodArt,NomArt,DesArt,precio,PreCom,descuento,IVA,recargo,cantidad,stock,fecha,hora,ForPag,albaran_factura,CodUsu FROM compras WHERE CodUsu = ?");
 	$stmt3->bind_param('s', $sesion->CodUsu);
 	$stmt3->execute();
 	$stmt3->close();

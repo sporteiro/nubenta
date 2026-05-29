@@ -39,8 +39,8 @@ if (isset($_POST["nombre"]) && (isset($_POST["cantidad"])) && ($_POST["cantidad"
 	$fecha = $conn->real_escape_string($_POST['fecha']);
 	$hora = $conn->real_escape_string($_POST['hora']);
 
-  	$stmt2 = $conn->prepare("INSERT INTO ventas (CodFac,CodArt,OrdMov,NomArt,DesArt,cantidad, stock, precio,IVA,fecha,hora,CodUsu) VALUES (?, ?, ?, ?, ?, ?, ?-?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE cantidad=cantidad+?");
-	$stmt2->bind_param('sssssssssssss', $numtic, $CodArt2, $OrdMov, $nombre, $descripcion, $cantidad, $stock, $cantidad, $precio, $IVA, $fecha, $hora, $sesion->CodUsu, $cantidad);
+  	$stmt2 = $conn->prepare("INSERT INTO ventas (OrdMov,CodFac,CodArt,NomArt,DesArt,cantidad, stock, precio,IVA,fecha,hora,ForPag,entregado,CodUsu) VALUES (?, ?, ?, ?, ?, ?, ?-?, ?, ?, ?, ?, 'efectivo', 0, ?) ON DUPLICATE KEY UPDATE cantidad=cantidad+?");
+	$stmt2->bind_param('ssssssssssssss', $OrdMov, $numtic, $CodArt2, $nombre, $descripcion, $cantidad, $stock, $cantidad, $precio, $IVA, $fecha, $hora, $sesion->CodUsu, $cantidad);
 	$stmt2->execute();
 	$stmt2->close();
 

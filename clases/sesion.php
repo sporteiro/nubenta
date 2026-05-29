@@ -126,7 +126,7 @@ class sesion {
 		$cnueva = $conn->real_escape_string($_POST['cnueva'] ?? '');
 		$forpago = $conn->real_escape_string($_POST['forpago'] ?? '');
 
-		$stmt = $conn->prepare('UPDATE usuario SET nombre = ?, apellido = ?, email = ?, contrasena = ?, forpago = ? WHERE usuario = ?');
+		$stmt = $conn->prepare('UPDATE andrea SET nombre = ?, apellido = ?, email = ?, contrasena = ?, moneda = ? WHERE usuario = ?');
 		$stmt->bind_param('ssssss', $nombre, $apellido, $email, $cnueva, $forpago, $usuario);
 
 		if (!$stmt->execute()) {

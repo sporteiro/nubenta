@@ -34,7 +34,7 @@ if (isset($_POST["insertaryborrar"]))  {
 
 
 	
-	$stmt3 = $conn->prepare("INSERT INTO faccli (SELECT * FROM ventas WHERE CodUsu = ?)");
+	$stmt3 = $conn->prepare("INSERT INTO faccli (OrdMov,CodFac,CodArt,NomArt,DesArt,precio,IVA,cantidad,stock,fecha,hora,ForPag,entregado,CodUsu) SELECT OrdMov,CodFac,CodArt,NomArt,DesArt,precio,IVA,cantidad,stock,fecha,hora,ForPag,entregado,CodUsu FROM ventas WHERE CodUsu = ?");
 	$stmt3->bind_param('s', $sesion->CodUsu);
 	$stmt3->execute();
 	$stmt3->close();

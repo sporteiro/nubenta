@@ -49,7 +49,7 @@ if (isset($_POST["ICodFam"]) && (isset($_POST["INomArt"])) && ($_POST["INomArt"]
 	$ICodPro = $conn->real_escape_string($_POST['ICodPro']);
 	$Iprecio = $conn->real_escape_string($_POST['Iprecio']);
 
-	$stmt4 = $conn->prepare("INSERT INTO articulos (CodArt,CodFam,NomArt,DesArt,CodPro,precio,PreCom, cantidad,CodUsu) VALUES (?, ?, ?, ?, ?, ?, 0, 0, ?)");
+	$stmt4 = $conn->prepare("INSERT INTO articulos (CodArt,CodFam,NomArt,DesArt,CodPro,precio,PreCom, cantidad,OrdMov,CodUsu) VALUES (?, ?, ?, ?, ?, ?, 0, 0, 0, ?)");
 	$stmt4->bind_param('sssssss', $CA, $ICodFam, $INomArt, $IDesArt, $ICodPro, $Iprecio, $sesion->CodUsu);
 	$stmt4->execute();
 	$stmt4->close();
