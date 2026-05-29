@@ -10,7 +10,7 @@ if (!$sesion->conectado) {
 }
 
 //BUSCAR LOS DATOS DEL ARTICULO POR SU CODIGO ENVIADO POR POST
-if (isset($_POST['CodArt']))  {
+if (isset($_POST['CodArt']) && $_POST['CodArt'] !== null)  {
 	$articulo = $conn->real_escape_string($_POST['CodArt']);
 }
 else {
@@ -27,9 +27,9 @@ $stmt->close();
 
 //INSERTAR EN LA TABLA COMPRAS LA COMPRA PARCIAL, DESPUES SE BORRARA
 if (isset($_POST["nombre"]) && (isset($_POST["cantidad"])) && ($_POST["cantidad"]!=0) )  {
-	$numtic = $conn->real_escape_string($_POST['numtic']);
-	$CodArt2 = $conn->real_escape_string($_POST['CodArt2']);
-	$OrdMov = $conn->real_escape_string($_POST['OrdMov']);
+	$numtic = $conn->real_escape_string($_POST['numtic'] ?? '0');
+	$CodArt2 = $conn->real_escape_string($_POST['CodArt2'] ?? '0');
+	$OrdMov = $conn->real_escape_string($_POST['OrdMov'] ?? '0');
 	$nombre = $conn->real_escape_string($_POST['nombre']);
 	$descripcion = $conn->real_escape_string($_POST['descripcion']);
 	$cantidad = $conn->real_escape_string($_POST['cantidad']);
@@ -42,8 +42,8 @@ if (isset($_POST["nombre"]) && (isset($_POST["cantidad"])) && ($_POST["cantidad"
 	$fecha = $conn->real_escape_string($_POST['fecha']);
 	$hora = $conn->real_escape_string($_POST['hora']);
 
-  	$stmt2 = $conn->prepare("INSERT INTO compras (CodFac,CodArt,OrdMov,NomArt,DesArt,cantidad,stock,precio,PreCom,descuento,IVA,recargo,fecha,hora,CodUsu) VALUES (?, ?, ?, ?, ?, ?, ?+?, ?, ?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE cantidad=cantidad+?");
-	$stmt2->bind_param('ssssssssssssssss', $numtic, $CodArt2, $OrdMov, $nombre, $descripcion, $cantidad, $cantidad, $stock, $precio, $PreCom, $descuento, $IVA, $recargo, $fecha, $hora, $sesion->CodUsu, $cantidad);
+  	$stmt2 = $conn->prepare("INSERT INTO compras (NumeroFactura,OrdMov,CodFac,CodArt,NomArt,DesArt,cantidad,stock,precio,PreCom,descuento,IVA,recargo,fecha,hora,ForPag,albaran_factura,CodUsu) VALUES (?, ?, ?, ?, ?, ?, ?+?, ?, ?, ?, ?, ?, ?, ?, 'efectivo', 'albaran', ?) ON DUPLICATE KEY UPDATE cantidad=cantidad+?");
+	$stmt2->bind_param('sssssssssssssssss', $numtic, $OrdMov, $numtic, $CodArt2, $nombre, $descripcion, $cantidad, $cantidad, $stock, $precio, $PreCom, $descuento, $IVA, $recargo, $fecha, $hora, $sesion->CodUsu, $cantidad);
 	$stmt2->execute();
 	$stmt2->close();
 
