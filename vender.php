@@ -179,13 +179,13 @@ if (isset($_POST["borrar"]))  {
 				</tr>
 			</table>
 			<br />
-			<div style="text-align: center;">	
-				<form action="vender.php" method="post"> 
+			<div style="text-align: center;">
+				<form action="vender.php" method="post">
 					<input type="hidden" name="borrar" value=""/>
-					<input type="submit" value="Anular la venta" class="botones"/>
-					<a href="faccli.php"> Efectuar la venta</a>
+					<input type="submit" value="Anular la venta" class="botonesrojos" style="width: 200px;"/>
+					<a href="faccli.php" class="botones" style="width: 200px; display: inline-block; text-align: center;">Efectuar la venta</a>
 				</form>
-			
+
 			</div>
 		</div>
 		<?php  } ?>

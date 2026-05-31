@@ -229,13 +229,13 @@ $stmt7->close();
 				</tr>
 			</table>
 			<br />
-			<div style="text-align: center;">	
-				<form action="comprar.php" method="post"> 
+			<div style="text-align: center;">
+				<form action="comprar.php" method="post">
 					<input type="hidden" name="borrar" value=""/>
-					<input type="submit" value="Anular la compra" class="botones"/>
-					<a href="facpro.php"> Efectuar la compra</a>
+					<input type="submit" value="Anular la compra" class="botonesrojos" style="width: 200px;"/>
+					<a href="facpro.php" class="botones" style="width: 200px; display: inline-block; text-align: center;">Efectuar la compra</a>
 				</form>
-			
+
 			</div>
 		</div>
 		<?php  } ?>
