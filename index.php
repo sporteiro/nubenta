@@ -70,8 +70,7 @@ $sesion = new sesion();
 		</div>
 		<div style="clear:both"></div>
 	<hr />
-		Dise&ntilde;o y desarrollo del sitio: <a href="http://sebastianporteiro.com.ar">Sebastian Porteiro </a> <img src="img/sebastianporteiro.ico" alt="sebastianporteiro.com.ar"/><br />
-		<a href="http://000webhost.com">000webhost</a>, el mejor servicio de hosting de la red <img src="img/webhost.ico" alt="000webhost"/><br />
+		Dise&ntilde;o y desarrollo del sitio: <a href="http://sebastianporteiro.com">Sebastian Porteiro </a> <img src="https://www.sebastianporteiro.com/img/favicon.ico" alt="sebastianporteiro.com"/><br />
 	</div>
 	<!-- FIN FINAL -->
 </body>
